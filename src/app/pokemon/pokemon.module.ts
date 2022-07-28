@@ -7,6 +7,9 @@ import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.componen
 import { ListPokemonComponent } from './list-pokemon/list-pokemon.component';
 import { PokemonRoutingModule } from './pokemon-routing.module';
 import { PokemonService } from './pokemon.service';
+import { FormsModule } from '@angular/forms';
+import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
+import { PokemonEditComponent } from './pokemon-edit/pokemon-edit.component';
 
 
 
@@ -15,10 +18,13 @@ import { PokemonService } from './pokemon.service';
     BorderCardDirective,
     PokemonTypeColor,
     DetailPokemonComponent,
-    ListPokemonComponent
+    ListPokemonComponent,
+    PokemonFormComponent,
+    PokemonEditComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     PokemonRoutingModule
   ],
   providers: [

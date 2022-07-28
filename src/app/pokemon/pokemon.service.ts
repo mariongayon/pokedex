@@ -14,5 +14,12 @@ export class PokemonService{
     return pokemons.find( x => x.id == id)
     };
 
-    updatePokemon(){};
+    getPokemonTypes() : Array<string> {
+        return [
+            'Plante', 'Feu', 'Eau', 'Insecte', 'Normal', 'Electrik',
+            'Poison', 'Fée', 'Vol', 'Combat', 'Psy'
+        ];
+    }
+
+    //updatePokemon(){};
 }
