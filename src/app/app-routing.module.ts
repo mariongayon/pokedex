@@ -7,8 +7,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes = [
   { path: "pokemons", component: ListPokemonComponent},
   { path: "pokemon/:id", component: DetailPokemonComponent},
-  { path: "**", pathMatch: 'full', component: PageNotFoundComponent },
-  { path: "", redirectTo: "pokemons", pathMatch: 'full'}
+  { path: "", redirectTo: "pokemons", pathMatch: 'full'},
+  { path: "**", component: PageNotFoundComponent }
  ]
 
 @NgModule({
