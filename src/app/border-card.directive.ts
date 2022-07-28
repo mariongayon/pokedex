@@ -6,7 +6,7 @@ import { Directive, ElementRef, HostListener, Input } from "@angular/core";
 export class BorderCardDirective {
     constructor(private el: ElementRef) {
         this.setBorder('#f5f5f5');
-        this.setHeight(180) 
+        this.setHeight(180); 
     }
 
     @Input('pkmnBorderCard') borderColer: string;

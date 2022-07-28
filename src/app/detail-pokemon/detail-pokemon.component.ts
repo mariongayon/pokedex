@@ -19,22 +19,21 @@ export class DetailPokemonComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokemons = POKEMONS;
-
+    
     // Récupérer l'ID depuis notre URL avec l'objet route
    let id = +this.route.snapshot.params['id'];
-
-    // Avec cet ID, récupérer le pokemon et le stocker dans pokemon (FOR, IF)  
-    for ( var i=0; i<this.pokemons.length; i++ ) {
-      if (this.pokemons[i].id == id) {
-        break;
-      } this.pokemon = this.pokemons[i];
-    }
-
     // Nouvelle méthode typescript, find ne renvoie qu'un élément
     this.pokemon = this.pokemons.find( x => x.id == id)
 
+    // Avec cet ID, récupérer le pokemon et le stocker dans pokemon (FOR, IF)  
+    /*for ( var i=0; i<this.pokemons.length; i++ ) {
+      if (this.pokemons[i].id == id) {
+        break;
+      } this.pokemon = this.pokemons[i];
+    }*/
+
     // filter renvoie tous les éléments du tableau par id
-    this.pokemon = this.pokemons.filter( x => x.id == id)[0];
+    //this.pokemon = this.pokemons.filter( x => x.id == id)[0];
   }
 
   goBack(): void {
